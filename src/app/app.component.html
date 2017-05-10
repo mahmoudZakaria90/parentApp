@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+
+<ul class="products">
+  <li *ngFor="let product of products" class="item">
+    <h2><a (click)="onSelect(product)">{{product.product}}</a></h2>
+    <p>{{product.price}}</p>
+    <p>{{product.Brand}}</p>
+    <p>{{product.Category}}</p>
+  </li>
+</ul>
+
+
+<app-prodcut-details [product]="selectedProduct"></app-prodcut-details>
